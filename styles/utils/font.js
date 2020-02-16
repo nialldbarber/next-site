@@ -13,6 +13,34 @@ export default createGlobalStyle`
     src: url(${AirbnbCerealBlack});
   }
 
+  @font-face {
+    font-family: 'AirbnbCerealMedium';
+    src: url(${AirbnbCerealMedium});
+  }
+
+  * {
+    box-sizing: inherit;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    &:before, 
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  html {
+    box-sizing: border-box;
+    line-height: 1.15;
+  }
+
+  body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'AirbnbCerealMedium';
+  }
+
   h1 {
     font-family: 'AirbnbCerealBlack';
   }

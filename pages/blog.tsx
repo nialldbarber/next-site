@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Link from 'next/link'
 import { NextPage } from 'next'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_POSTS } from 'queries/blog'
 import Loading from 'components/loading'
-import Post from 'components/post'
+
+const PostLink = ({ uri, id }) => (
+  <li>
+    <Link href="/posts/[id]" as={`/posts/${uri}`}>
+      <a>{id}</a>
+    </Link>
+  </li>
+)
 
 const Blog: NextPage = () => {
   const { loading, error, data } = useQuery(GET_POSTS)
@@ -11,13 +19,13 @@ const Blog: NextPage = () => {
   if (error) return <p>Error</p>
   const schema = data.posts
 
-  console.log(schema)
-
   return (
     <div>
       <h1>Blog</h1>
-      {schema.map(({ id, title, type }) => (
-        <p key={id}>{title}</p>
+      {schema.map(({ id, title }) => (
+        <Fragment key={id}>
+          <PostLink id={title} uri={id} />
+        </Fragment>
       ))}
     </div>
   )
