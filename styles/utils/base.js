@@ -38,10 +38,25 @@ export default createGlobalStyle`
     position: relative;
     margin: 0;
     padding: 0;
-    font-family: 'AirbnbCerealMedium';
+    font-family: ${props => props.theme.mainFont};
+    background-color: ${props => props.theme.black};
+    color:  ${props => props.theme.white};
   }
 
   h1 {
-    font-family: 'AirbnbCerealBlack';
+    font-family: ${props => props.theme.boldFont};
   }
-`;
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.white};
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+`
