@@ -17,10 +17,10 @@
   },
   "exclude": ["node_modules"],
   "include": [
-    "next-env.d.ts",
+    "@types/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next-env.d.ts",
+    "@types/next-env.d.ts",
     "images.d.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
