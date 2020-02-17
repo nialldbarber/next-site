@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_TECHSTACK } from 'queries/tech'
 import Loading from 'components/loading'
+import { Heading } from 'styles/typography/header'
 
 const TechPage: NextPage = () => {
   const { loading, error, data } = useQuery(GET_TECHSTACK)
@@ -10,11 +11,9 @@ const TechPage: NextPage = () => {
   if (error) return <p>Error</p>
   const schema = data.pages[0]
 
-  console.log(schema)
-
   return (
     <div>
-      <h1>{schema.title}</h1>
+      <Heading>{schema.title}</Heading>
       <p>{schema.content}</p>
     </div>
   )

@@ -52,6 +52,10 @@ export default createGlobalStyle`
     color: ${props => props.theme.white};
   }
 
+  p {
+    font-size: 1rem;
+  }
+
   ul {
     padding: 0;
 

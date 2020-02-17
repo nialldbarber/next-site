@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_HOME } from 'queries/home'
 import Loading from 'components/loading'
+import { Heading } from 'styles/typography/header'
 
 const Home: NextPage = () => {
   const { loading, error, data } = useQuery(GET_HOME)
@@ -12,7 +13,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <h1>{schema.title}</h1>
+      <Heading>{schema.title}</Heading>
       <p>{schema.content}</p>
     </div>
   )

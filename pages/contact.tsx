@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_CONTACT } from 'queries/contact'
 import Loading from 'components/loading'
+import { Heading } from 'styles/typography/header'
 
 const ContactPage: NextPage = () => {
   const { loading, error, data } = useQuery(GET_CONTACT)
@@ -14,7 +15,7 @@ const ContactPage: NextPage = () => {
 
   return (
     <div>
-      <h1>{schema.title}</h1>
+      <Heading>{schema.title}</Heading>
       <p>{schema.content}</p>
     </div>
   )

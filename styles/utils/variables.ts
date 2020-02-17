@@ -5,4 +5,6 @@ export const theme = {
   // Colours
   black: 'rgb(30, 39, 45)',
   white: 'rgb(255, 255, 255)',
+  // Dimensions
+  padding: '2rem',
 }

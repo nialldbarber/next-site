@@ -10,7 +10,7 @@ export const Header = styled.header`
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-      margin: 0 0 1rem;
+      margin: 0 2rem 0 0;
       height: 100%;
 
       li {
@@ -24,7 +24,7 @@ export const Header = styled.header`
 
 export const LogoWrap = styled.div`
   width: 100px;
-  margin: 1rem;
+  margin: 1rem 2rem;
 
   img {
     width: 100%;
